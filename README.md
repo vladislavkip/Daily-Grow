@@ -37,6 +37,7 @@ git clone https://github.com/vladislavkip/Daily-Grow.git
 ```bash
 docker-compose up -d --build
 docker-compose exec app composer install
+docker-compose exec app php artisan key:generate
 docker-compose exec app php artisan migrate
 ```
 
