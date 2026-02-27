@@ -33,13 +33,21 @@ git clone https://github.com/vladislavkip/Daily-Grow.git
 
 2. **Создаём и запускаем контейнеры:**
 
+Первый запуск
 ```bash
 docker-compose up -d --build
+docker-compose exec app composer install
+docker-compose exec app php artisan migrate
 ```
 
-⚠️ При первом запуске также необходимо выполнить миграцию БД
+В дальнейшем запускать через
 ```bash
-docker-compose exec app php artisan migrate
+docker-compose up -d
+```
+
+Остановка Docker
+```bash
+docker-compose down
 ```
 
 ## Доступ к приложению:
